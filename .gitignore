@@ -1,0 +1,5 @@
+*.pyc
+db.sqlite3
+sftp-config.json
+/media/
+env/*
