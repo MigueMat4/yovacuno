@@ -56,6 +56,10 @@ class Personal(models.Model):
     def __str__(self):
         return self.nombres + ', ' + self.apellidos
 
+    class Meta:
+        verbose_name = "Personal"
+        verbose_name_plural = "Personal"
+
 class Rango (models.Model):
     rango = models.CharField(max_length=255)
     choice = models.PositiveSmallIntegerField(choices=RANGOS)
@@ -68,6 +72,10 @@ class Comunidad(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    class Meta:
+        verbose_name = "Comunidad"
+        verbose_name_plural = "Comunidades"
 
 class Persona (models.Model):
     cui = models.CharField(max_length=25, blank=True, null=True)
