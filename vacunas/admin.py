@@ -2,6 +2,9 @@ from django.contrib import admin
 
 from .models import *
 
+class VacunaAdmin(admin.ModelAdmin):
+	change_list_template = 'change_list.html'
+
 class VacunaInline(admin.TabularInline):
 	model = Vacuna
 	extra = 0
@@ -47,7 +50,8 @@ admin.site.register(Personal)
 #admin.site.register(Persona)
 admin.site.register(Comunidad)
 admin.site.register(Rango)
-admin.site.register(Vacuna)
+#admin.site.register(Vacuna)
+admin.site.register([Vacuna], VacunaAdmin)
 admin.site.register([Persona], PersonaAdmin)
 admin.site.site_header = 'Yo Vacuno'
 admin.site.site_title = 'Puesto de Salud Xantun'
