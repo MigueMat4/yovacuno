@@ -92,7 +92,10 @@ class Persona (models.Model):
     comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.primer_nombre
+        nombres = (self.primer_nombre + ' ' + self.segundo_nombre)
+        apellidos = (self.primer_apellido + ' ' + self.segundo_apellido)
+        final = nombres + ', ' + apellidos
+        return final
 
     def crearVacunas(self):
         for i in range(1, 20):
