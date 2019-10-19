@@ -24,7 +24,7 @@ services:
     volumes:
       - database_data:/var/lib/postgresql/data
   web:
-    image: miguemat4/yo_vacuno:1.4
+    image: miguemat4/yo_vacuno:1.5
     restart: always
     build: ./
     container_name: vacunas
